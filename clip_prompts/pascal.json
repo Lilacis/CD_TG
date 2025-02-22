@@ -1,0 +1,124 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "aeroplane",
+      "supercategory": "vehicle",
+      "caption": "A photo of an aeroplane in which it features a streamlined body, wings, and sharp contrasts, appearing metallic with smooth surfaces."
+    },
+    {
+      "id": 1,
+      "name": "bicycle",
+      "supercategory": "vehicle",
+      "caption": "A photo of a bicycle in which it features two circular wheels, a lightweight tubular frame, and high contrast with the background."
+    },
+    {
+      "id": 2,
+      "name": "bird",
+      "supercategory": "animal",
+      "caption": "A photo of a bird in which it features a small body, wings, a pointed beak, and clear contours in the head, wings, and tail."
+    },
+    {
+      "id": 3,
+      "name": "boat",
+      "supercategory": "vehicle",
+      "caption": "A photo of a boat in which it features an elongated hull with smooth or angular edges, standing out against the water background."
+    },
+    {
+      "id": 4,
+      "name": "bottle",
+      "supercategory": "container",
+      "caption": "A photo of a bottle in which it features a cylindrical body, narrow neck, smooth reflective surface, and symmetrical contours."
+    },
+    {
+      "id": 5,
+      "name": "bus",
+      "supercategory": "vehicle",
+      "caption": "A photo of a bus in which it features a large rectangular shape, multiple windows, and sharp, smooth surfaces."
+    },
+    {
+      "id": 6,
+      "name": "car",
+      "supercategory": "vehicle",
+      "caption": "A photo of a car in which it features a compact, streamlined body with smooth surfaces, defined edges, and symmetrical contours."
+    },
+    {
+      "id": 7,
+      "name": "cat",
+      "supercategory": "animal",
+      "caption": "A photo of a cat in which it features a small body, soft fur, pointed ears, and sharp contrasts in facial features."
+    },
+    {
+      "id": 8,
+      "name": "chair",
+      "supercategory": "furniture",
+      "caption": "A photo of a chair in which it features a flat seat, backrest, and four legs with clear edges and uniform textures."
+    },
+    {
+      "id": 9,
+      "name": "cow",
+      "supercategory": "animal",
+      "caption": "A photo of a cow in which it features a large body, short legs, patterned fur, and distinct spots with clear contours."
+    },
+    {
+      "id": 10,
+      "name": "diningtable",
+      "supercategory": "furniture",
+      "caption": "A photo of a dining table in which it features a flat surface supported by legs with smooth edges and uniform textures."
+    },
+    {
+      "id": 11,
+      "name": "dog",
+      "supercategory": "animal",
+      "caption": "A photo of a dog in which it features a muscular body, soft fur, and distinct contrasts in its eyes, ears, and nose."
+    },
+    {
+      "id": 12,
+      "name": "horse",
+      "supercategory": "animal",
+      "caption": "A photo of a horse in which it features a strong, muscular body, long neck, and clear contours in its legs and mane."
+    },
+    {
+      "id": 13,
+      "name": "motorbike",
+      "supercategory": "vehicle",
+      "caption": "A photo of a motorbike in which it features two wheels, a compact frame, and symmetrical contours with metallic surfaces."
+    },
+    {
+      "id": 14,
+      "name": "person",
+      "supercategory": "human",
+      "caption": "A photo of a person in which it features an upright posture, distinct facial features, and clothing that contrasts with the background."
+    },
+    {
+      "id": 15,
+      "name": "pottedplant",
+      "supercategory": "object",
+      "caption": "A photo of a potted plant in which it features irregular shapes in the leaves and stems with a smooth or textured pot."
+    },
+    {
+      "id": 16,
+      "name": "sheep",
+      "supercategory": "animal",
+      "caption": "A photo of a sheep in which it features a rounded body, woolly fur, and clear separation of head, body, and limbs."
+    },
+    {
+      "id": 17,
+      "name": "sofa",
+      "supercategory": "furniture",
+      "caption": "A photo of a sofa in which it features cushioned seats, armrests, and smooth or textured fabric surfaces with symmetrical edges."
+    },
+    {
+      "id": 18,
+      "name": "train",
+      "supercategory": "vehicle",
+      "caption": "A photo of a train in which it features a long body with connected carriages and sharp boundaries against the background."
+    },
+    {
+      "id": 19,
+      "name": "tvmonitor",
+      "supercategory": "electronics",
+      "caption": "A photo of a TV monitor in which it features a flat screen, smooth reflective surfaces, and sharp edges around the frame."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "BG",
+      "supercategory": "background",
+      "caption": "A photo of the background, representing regions without specific anatomical structures or target objects, often appearing uniform or low-textured."
+    }
+  ]
+}
+

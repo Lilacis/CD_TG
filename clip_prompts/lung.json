@@ -1,0 +1,11 @@
+{
+    "categories": [
+        {
+            "id": 0,
+            "name": "lung",
+            "supercategory": "chest-xray",
+            "caption": "A photo of the lung region in a chest X-ray, including the left and right lungs."
+        }
+    ]
+}
+

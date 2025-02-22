@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "BG",
+      "supercategory": "background",
+      "caption": "A photo of the background in which no objects of interest are present."
+    },
+    {
+      "id": 1,
+      "name": "LIVER",
+      "supercategory": "abdominal",
+      "caption": "A photo of the liver in which it appears as a large lobed organ involved in metabolic processes like detoxification and protein synthesis."
+    },
+    {
+      "id": 2,
+      "name": "RK",
+      "supercategory": "abdominal",
+      "caption": "A photo of the right kidney in which it is visible as an organ that filters blood to produce urine and regulates fluid balance."
+    },
+    {
+      "id": 3,
+      "name": "LK",
+      "supercategory": "abdominal",
+      "caption": "A photo of the left kidney in which it appears as an organ that removes waste and balances electrolytes in the body."
+    },
+    {
+      "id": 4,
+      "name": "SPLEEN",
+      "supercategory": "abdominal",
+      "caption": "A photo of the spleen in which it appears as an organ involved in blood cell production and immune response, located in the upper left abdomen."
+    }
+  ]
+}

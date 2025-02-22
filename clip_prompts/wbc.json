@@ -1,0 +1,17 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Cytoplasm",
+      "supercategory": "cellular_structure",
+      "caption": "A photo of cytoplasm, the semi-fluid substance within the cell membrane, appearing as a lightly stained area surrounding the nucleus with varying granularity."
+    },
+    {
+      "id": 1,
+      "name": "Nucleus",
+      "supercategory": "cellular_structure",
+      "caption": "A photo of a nucleus, a membrane-bound organelle housing genetic material, typically appearing as a densely stained region under microscopy."
+    }
+  ]
+}
+

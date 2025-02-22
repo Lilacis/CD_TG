@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "melanoma",
+      "supercategory": "skin_diseases",
+      "caption": "A photo of melanoma, a malignant skin lesion originating from melanocytes, often presenting as an asymmetrical, irregularly bordered area with uneven pigmentation."
+    },
+    {
+      "id": 1,
+      "name": "nevus",
+      "supercategory": "skin_diseases",
+      "caption": "A photo of a nevus, a benign pigmented lesion commonly referred to as a mole, typically round or oval with smooth surfaces and uniform coloration."
+    },
+    {
+      "id": 2,
+      "name": "seborrheic_keratosis",
+      "supercategory": "skin_diseases",
+      "caption": "A photo of seborrheic keratosis, a benign epidermal growth with a waxy, wart-like appearance and varying colors from pale yellow to dark brown."
+    }
+  ]
+}
