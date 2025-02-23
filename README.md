@@ -10,6 +10,8 @@ Cross-domain Few-shot Medical Image Segmentation (CD-FSMIS) typically involves p
 </p>
 We study the CD-FSS problem, where the source and target domains have completely disjoint label space and cannot access target domain data during the training stage. 
 
+## Clip Weights
+ Download Clip-Weights from [[Google Drive](https://drive.google.com/drive/folders/1BICJ2kXZe0TtgB9PrUNJRfE3IaPF_fJR?usp=sharing)]
 
 ## Datasets
 The following datasets are used for evaluation in CD-FSS:
@@ -50,19 +52,19 @@ The following datasets are used for evaluation in CD-FSS:
 
 * **Chest X-ray**:
 
-    Home: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256233/
+    Artical: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256233/
 
     Direct: https://www.kaggle.com/datasets/nikhilpandey360/chest-xray-masks-and-labels
   
 * **WBC**:
 
-    Home: https://www.sciencedirect.com/science/article/pii/S0968432817303037
+    Artical: https://www.sciencedirect.com/science/article/pii/S0968432817303037
 
     Direct: https://github.com/zxaoyou/segmentation_WBC
 
 * **CHAOS-MRI**:
 
-    Home: http://www.sciencedirect.com/science/article/pii/S1361841520303145
+    Artical: http://www.sciencedirect.com/science/article/pii/S1361841520303145
 
     Direct: [Combined Healthy Abdominal Organ Segmentation data set](https://chaos.grand-challenge.org/)
 
@@ -73,66 +75,31 @@ The following datasets are used for evaluation in CD-FSS:
 - cuda 10.1
 - tensorboard 1.14
 - open-clip
+- peft
 
 Conda environment settings:
 ```bash
-conda create -n patnet python=3.7
-conda activate patnet
+conda create -n cdtg python=3.7
+conda activate cdtg
 
 conda install pytorch=1.5.1 torchvision cudatoolkit=10.1 -c pytorch
 conda install -c conda-forge tensorflow
-pip install tensorboardX
+pip install tensorboardX open-clip peft
 ```
 
 ## Ablation Studies
 
 ## Visualization
 
-## Citation
-If you use this code for your research, please consider citing:
-```bash
-@inproceedings{lei2022cross,
-   title={Cross-Domain Few-Shot Semantic Segmentation},
-   author={Lei, Shuo and Zhang, Xuchao and He, Jianfeng and Chen, Fanglan and Du, Bowen and Lu, Chang-Tien},
-   booktitle={European Conference on Computer Vision},
-   pages={73--90},
-   year={2022},
-   organization={Springer}
- }
- ```
-
-## Acknowledgement
-The implementation is based on [HSNet](https://github.com/juhongm999/hsnet). <br>
-
 ## References
 
-[1] Demir, I., Koperski, K., Lindenbaum, D., Pang, G., Huang, J., Basu, S., Hughes,
-F., Tuia, D., Raskar, R.: Deepglobe 2018: A challenge to parse the earth through
-satellite images. In: The IEEE Conference on Computer Vision and Pattern Recog-
-nition (CVPR) Workshops (June 2018)Li, X., Wei, T., Chen, Y.P., Tai, Y.W., Tang, C.K.: Fss-1000: A 1000-class dataset
-for few-shot segmentation. In: Proceedings of the IEEE/CVF Conference on Com-
-puter Vision and Pattern Recognition. pp. 2869–2878 (2020)
+[1] Shen Q, Li Y, Jin J, et al. Q-net: Query-informed few-shot medical image segmentation[C]//Proceedings of SAI Intelligent Systems Conference. Cham: Springer Nature Switzerland, 2023: 610-628.
 
-[2] Codella, N., Rotemberg, V., Tschandl, P., Celebi, M.E., Dusza, S., Gutman, D.,
-Helba, B., Kalloo, A., Liopyris, K., Marchetti, M., et al.: Skin lesion analysis toward
-melanoma detection 2018: A challenge hosted by the international skin imaging
-collaboration (isic). arXiv preprint arXiv:1902.03368 (2019)
+[2] Yang B, Liu C, Li B, et al. Prototype mixture models for few-shot semantic segmentation[C]//Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part VIII 16. Springer International Publishing, 2020: 763-778.
 
-[3] Tschandl, P., Rosendahl, C., Kittler, H.: The ham10000 dataset, a large collection
-of multi-source dermatoscopic images of common pigmented skin lesions. Scientific
-data 5, 180161 (2018)
+[3] Lei S, Zhang X, He J, et al. Cross-domain few-shot semantic segmentation[C]//European conference on computer vision. Cham: Springer Nature Switzerland, 2022: 73-90.
 
-[4] Candemir, S., Jaeger, S., Palaniappan, K., Musco, J.P., Singh, R.K., Xue, Z.,
-Karargyris, A., Antani, S., Thoma, G., McDonald, C.J.: Lung segmentation in
-chest radiographs using anatomical atlases with nonrigid registration. IEEE trans-
-actions on medical imaging 33(2), 577–590 (2013)
+[4] Chen J, Quan R, Qin J. Cross-domain few-shot semantic segmentation via doubly matching transformation[J]. arXiv preprint arXiv:2405.15265, 2024.
 
-[5] Jaeger, S., Karargyris, A., Candemir, S., Folio, L., Siegelman, J., Callaghan, F.,
-Xue, Z., Palaniappan, K., Singh, R.K., Antani, S., et al.: Automatic tuberculosis
-screening using chest radiographs. IEEE transactions on medical imaging 33(2),
-233–245 (2013)
-
-[6] Li, X., Wei, T., Chen, Y.P., Tai, Y.W., Tang, C.K.: Fss-1000: A 1000-class dataset
-for few-shot segmentation. In: Proceedings of the IEEE/CVF Conference on Com-
-puter Vision and Pattern Recognition. pp. 2869–2878 (2020)
+[5] Nie J, Xing Y, Zhang G, et al. Cross-domain few-shot segmentation via iterative support-query correspondence mining[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2024: 3380-3390.
 
