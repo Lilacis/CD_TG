@@ -6,7 +6,7 @@ This is the implementation of the paper "Leveraging Language to Generalize Natur
 Cross-domain Few-shot Medical Image Segmentation (CD-FSMIS) typically involves pre-training on a large-scale source domain dataset (e.g., natural image dataset) before transferring to a target domain with limited data for pixel-wise segmentation. However, due to the significant domain gap between natural images and medical images, existing Few-shot Segmentation (FSS) methods suffer from severe performance degradation in cross-domain scenarios. We observe that using only annotated masks as cross-domain cues is insufficient, while rich textual information can effectively establish knowledge relationships between visual instances and language descriptions, mitigating domain shift. To address this, we propose a plug-in Cross-domain Text-guided (CD-TG) module that leverages text-domain alignment to construct a new alignment space for domain generalization. This plug-in module consists of two components, including: (1) Text Generation Unit that utilizes the GPT-4 question-answering system to generate standardized category-level textual descriptions, and (2) Semantic-guided Unit that aligns visual and linguistic support feature embeddings while incorporating existing mask information. We integrate this plug-in module into five mainstream FSS methods and evaluate it on four widely used medical image datasets. Experimental results demonstrate its effectiveness. 
 
 <p align="middle">
-    <img src="data/assets/frame.png">
+    <img src="assets/frame.png">
 </p>
 We study the CD-FSS problem, where the source and target domains have completely disjoint label space and cannot access target domain data during the training stage. 
 
