@@ -6,7 +6,7 @@ This is the implementation of the paper "Leveraging Language to Generalize Natur
 Cross-domain Few-shot Medical Image Segmentation (CD-FSMIS) typically involves pre-training on a large-scale source domain dataset (e.g., natural image dataset) before transferring to a target domain with limited data for pixel-wise segmentation. However, due to the significant domain gap between natural images and medical images, existing Few-shot Segmentation (FSS) methods suffer from severe performance degradation in cross-domain scenarios. We observe that using only annotated masks as cross-domain cues is insufficient, while rich textual information can effectively establish knowledge relationships between visual instances and language descriptions, mitigating domain shift. To address this, we propose a plug-in Cross-domain Text-guided (CD-TG) module that leverages text-domain alignment to construct a new alignment space for domain generalization. This plug-in module consists of two components, including: (1) Text Generation Unit that utilizes the GPT-4 question-answering system to generate standardized category-level textual descriptions, and (2) Semantic-guided Unit that aligns visual and linguistic support feature embeddings while incorporating existing mask information. We integrate this plug-in module into five mainstream FSS methods and evaluate it on four widely used medical image datasets. Experimental results demonstrate its effectiveness. 
 
 <p align="middle">
-    <img src="assets/frame.png">
+    <img src="asset/Frame.png">
 </p>
 We study the CD-FSS problem, where the source and target domains have completely disjoint label space and cannot access target domain data during the training stage. 
 
@@ -87,9 +87,17 @@ conda install -c conda-forge tensorflow
 pip install tensorboardX open-clip peft
 ```
 
-## Ablation Studies
+## Hyperparameterization and Visualization
+<p align="middle">
+    <img src="asset/Ablation.png" width="45%" />
+    <img src="asset/Visualization.png" width="45%" />
+</p>
 
-## Visualization
+The above experiments are built on the baseline model PATNet.
+
+This line graph illustrates the relationship between different $\alpha$ values (representing text bootstrap contribution) and model performance. The graph reveals that as the $\alpha$ value increases, the MIOU value initially rises and then begins to decline. At $\alpha = 0.3$, MIOU reaches its peak at 71.8, after which it decreases as $\alpha$ continues to increase, eventually reaching 63.4 at $\alpha = 0.9$. This trend suggests that extreme $\alpha$ values may cause performance degradation. It highlights the importance of effectively balancing the contributions of the mask and the text in the model to achieve optimal performance.
+
+For this set of visualizations, one segmentation example was selected from each of the four datasets: Lung, ISIC, WBC, and MRI. Each dataset displays the original image with a mask (ground truth and predicted) superimposed to highlight the segmented regions.
 
 ## References
 
