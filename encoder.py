@@ -89,7 +89,6 @@ class CLIPModel:
         with torch.no_grad():
             text_features = self.model.encode_text(text_inputs)
 
-        # 适配不同架构的 feature 维度
         if "RN" in self.model_name:
             text_features = text_features[:, :512]
 
