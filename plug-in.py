@@ -8,8 +8,9 @@ import torch.nn.functional as F
 class BaseLineNet(nn.Module):
     def __init__(self, backbone, clip):
         super(BaseLineNet, self).__init__()
-
-        self.encoder = backbone
+        
+        ######### The Encoder of Baseline model #############
+        self.encoder = backbone  # you should modify it as appropriate
 
         ############# Initialize CD-TG module ############
         if clip == 'RN50':
@@ -34,7 +35,7 @@ class BaseLineNet(nn.Module):
         # Aligning features of support images using ADaIN
         # when testing and finetune, close the ADaIN
         if train:
-            feature_s = self.ADaIN(feature_s)  # [B, 512, H, W]
+            feature_s = self.ADaIN(feature_s) 
 
         ################ Leveraging the text_guidance into CD-FSS ####################
         bdx = torch.zeros(img_q.shape[0], dtype=torch.long)
@@ -43,15 +44,16 @@ class BaseLineNet(nn.Module):
 
         feature_st, feature_qt, FP_t, BP_t = self.generate_prototype(text_embedding_f, text_embedding_b, feature_s,
                                                                                                feature_q, mask_s)
-        feature_st = torch.cat(feature_st, dim=0) # [B, 1024, 50, 50]
+        feature_st = torch.cat(feature_st, dim=0)
         FP_t = torch.mean(torch.cat(FP_t, dim=0), dim=0, keepdim=True)
         BP_t = torch.mean(torch.cat(BP_t, dim=0), dim=0, keepdim=True)
         
         # foreground(target class) and background prototypes FP and BP from baseline method
         FP = self.FAN1(FP_t, FP)
         BP = self.FAN1(BP_t, BP)
-
-        pred_mask = self.decoder(feature_s, feature_q, FP, BP, mask_s)
+        
+        ######## The decoder of Baseline model ###########
+        pred_mask = self.decoder(feature_s, feature_q, FP, BP, mask_s) # you should modify it as appropriate
 
         return pred_mask
 
@@ -59,9 +61,11 @@ class BaseLineNet(nn.Module):
         """
         generate prototype
         :param text_embedding: (B, C)
-        :param support_feature: (B, C, H, W)
-        :param mask: (B, 1, H, W)
-        :return: prototype, (1, C)
+        :param text_embedding_b: (B, C)
+        :param img_s: {(B, C, H, W)}
+        :param img_q: (B, C, H, W)
+        :param support_mask: {(B, 1, H, W)}
+        :return: prototype, {(1, C)}
         """
         eps = 1e-6
         img_st_list = []
