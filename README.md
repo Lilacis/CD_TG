@@ -89,15 +89,14 @@ pip install tensorboardX open-clip peft
 
 ## Hyperparameterization and Visualization
 <p align="middle">
-    <img src="asset/Ablation.png" width="45%" />
-    <img src="asset/Visualization.png" width="45%" />
+    <img src="asset/Ablation.png" width="40%" height="300px" />
+    <img src="asset/Visualization.png" width="40%" height="320px" />
 </p>
-
 The above experiments are built on the baseline model PATNet.
 
-This line graph illustrates the relationship between different $\alpha$ values (representing text bootstrap contribution) and model performance. The graph reveals that as the $\alpha$ value increases, the MIOU value initially rises and then begins to decline. At $\alpha = 0.3$, MIOU reaches its peak at 71.8, after which it decreases as $\alpha$ continues to increase, eventually reaching 63.4 at $\alpha = 0.9$. This trend suggests that extreme $\alpha$ values may cause performance degradation. It highlights the importance of effectively balancing the contributions of the mask and the text in the model to achieve optimal performance.
+The line graph illustrates the effect of varying α values (representing text contribution) on the MIoU of three datasets: Lung, ISIC, and WBC. The left y-axis represents the MIoU of the Lung dataset, while the right y-axis displays the MIoU values for the ISIC and WBC datasets. The MIoU of the Lung dataset fluctuates between 69.4 and 73.7, with the highest value observed at α = 0.7 (73.7). The MIoU of the ISIC dataset remains in the range of 41.5 to 45.4, showing less sensitivity to changes in α. The WBC dataset remains relatively stable, with MIoU values ranging from 49.0 to 49.8. Each data point is labeled with the corresponding MIoU value to provide a clearer view of the model's performance at different α values. The legend distinguishes the three datasets, facilitating easy comparison of their trends. Overall, there is a nonlinear relationship between the model’s performance and the α hyperparameter values.
 
-For this set of visualizations, one segmentation example was selected from each of the four datasets: Lung, ISIC, WBC, and MRI. Each dataset displays the original image with a mask (ground truth and predicted) superimposed to highlight the segmented regions.
+For this set of visualizations, some segmentation examples were selected from each of the four datasets: Lung, ISIC, WBC, and MRI. Each dataset displays the original image with a mask (ground truth, baseline and our predicted) superimposed to highlight the segmented regions.
 
 ## References
 
