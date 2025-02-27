@@ -89,7 +89,7 @@ pip install tensorboardX open-clip peft
 
 ## Hyperparameterization and Visualization
 <p align="middle">
-    <img src="asset/Ablation.png" width="40%" height="250px" />
+    <img src="asset/Ablation.png" width="40%" height="260px" />
     <img src="asset/Visualization.png" width="40%" height="270px" />
 </p>
 The above experiments are built on the baseline model PATNet.
