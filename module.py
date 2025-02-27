@@ -96,7 +96,7 @@ class ADaIN(nn.Module):
         """
         Simulates contrast variations in medical images, such as the contrast of bones and tissues in CT images.
         """
-        return F.relu(content * (1 + strength))  # 增强对比度
+        return F.relu(content * (1 + strength))
 
     def apply_boundary(self, content, strength):
         """
@@ -125,7 +125,7 @@ class ADaIN(nn.Module):
         :return: low contrast image
         """
         mean = torch.mean(content, dim=(2, 3), keepdim=True)  # [B, C, 1, 1]
-        content_low_contrast = mean + strength * (content - mean)  # 图像的亮度值靠近均值
+        content_low_contrast = mean + strength * (content - mean)
 
         return content_low_contrast
 
